@@ -56,7 +56,6 @@ Windows 10 Host
 
 ![User Created](images/ADuser.JPG)
 
-![User Created](images/ADuser.JPG)
 ---
 
 ### 👥 Group Membership Managed via CLI
@@ -67,11 +66,9 @@ Windows 10 Host
 
 ### 📜 CLI Usage Example
 
-> *(Insert screenshot of PowerShell running adtool commands)*
 
-```
-![CLI Usage](images/cli-usage.png)
-```
+![CLI Usage](images/commandLine_Usage.JPG)
+
 ---
 
 ## 🔧 Installation
