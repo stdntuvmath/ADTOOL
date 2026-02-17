@@ -280,4 +280,5 @@ This project operates against a live domain controller in a virtual lab environm
 ## 👨‍💻 Author
 
 Built by Brandon Turner
+
 Active Directory | Automation | Systems Engineering
