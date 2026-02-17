@@ -1,6 +1,6 @@
 # 📁 Active Directory Automation Tool (adtool)
 
-> A Python-based CLI tool for managing Active Directory users and groups via LDAP.
+> A Python-based command-line interface tool for managing Active Directory users and groups via the LDAP api.
 
 ---
 
@@ -48,32 +48,22 @@ Windows 10 Host
 
 ### 🖥️ Virtual Lab Environment
 
-> *(Insert screenshot of VirtualBox with AD-DC01 + WIN10-CLIENT running)*
 
-```
-![Virtual Lab](images/lab-overview.png)
-```
-
+![Virtual Lab](images/VBM_ServerClientOn.JPG)
 ---
 
 ### 👤 User Created via CLI
 
-> *(Insert screenshot of AD Users and Computers showing created user)*
 
 ```
-![User Created](images/user-created.png)
+![User Created](images/ADuser.JPG)
 ```
-
 ---
 
 ### 👥 Group Membership Managed via CLI
 
-> *(Insert screenshot of group properties showing membership)*
 
-```
-![Group Membership](images/group-membership.png)
-```
-
+![Group Membership](images/AD_serverManager.JPG)
 ---
 
 ### 📜 CLI Usage Example
@@ -83,7 +73,6 @@ Windows 10 Host
 ```
 ![CLI Usage](images/cli-usage.png)
 ```
-
 ---
 
 ## 🔧 Installation
@@ -94,7 +83,6 @@ Windows 10 Host
 git clone https://github.com/yourusername/adtool.git
 cd adtool
 ```
-
 ---
 
 ### 2️⃣ Create Virtual Environment
@@ -103,7 +91,6 @@ cd adtool
 python -m venv venv
 venv\Scripts\activate
 ```
-
 ---
 
 ### 3️⃣ Install in Editable Mode
@@ -111,7 +98,6 @@ venv\Scripts\activate
 ```bash
 pip install -e .
 ```
-
 ---
 
 ## 🔐 Credentials Setup
@@ -121,7 +107,6 @@ Create a file named:
 ```
 credentials.json
 ```
-
 Format:
 
 ```json
@@ -131,7 +116,6 @@ Format:
   "password": "YourPasswordHere"
 }
 ```
-
 ⚠️ **Important:**
 Add `credentials.json` to your `.gitignore` file.
 
@@ -144,7 +128,6 @@ Add `credentials.json` to your `.gitignore` file.
 ```bash
 adtool create-user First.Last
 ```
-
 ---
 
 ### Create Group
@@ -152,7 +135,6 @@ adtool create-user First.Last
 ```bash
 adtool create-group GroupName
 ```
-
 ---
 
 ### Add User to Group
@@ -160,7 +142,6 @@ adtool create-group GroupName
 ```bash
 adtool add-user-to-group First.Last GroupName
 ```
-
 ---
 
 ### Remove User from Group
@@ -168,7 +149,6 @@ adtool add-user-to-group First.Last GroupName
 ```bash
 adtool delete-user-from-group First.Last GroupName
 ```
-
 ---
 
 ### List Users in Group
@@ -176,7 +156,6 @@ adtool delete-user-from-group First.Last GroupName
 ```bash
 adtool list-users-in-group GroupName
 ```
-
 ---
 
 ### Disable User
@@ -184,7 +163,6 @@ adtool list-users-in-group GroupName
 ```bash
 adtool disable-user First.Last
 ```
-
 ---
 
 ### Enable User
@@ -192,7 +170,6 @@ adtool disable-user First.Last
 ```bash
 adtool enable-user First.Last
 ```
-
 ---
 
 ## 🧩 Technical Highlights
@@ -206,7 +183,6 @@ server = Server(DC_IP, get_info=ALL)
 conn = Connection(server, user=USERNAME, password=PASSWORD)
 conn.bind()
 ```
-
 ---
 
 ### Distinguished Name (DN) Handling
@@ -220,7 +196,6 @@ conn.search(
     attributes=["distinguishedName"]
 )
 ```
-
 ---
 
 ### Bitwise Account Control Management
@@ -231,7 +206,6 @@ Account enable/disable is performed using bitwise flag manipulation:
 ACCOUNTDISABLE = 2
 new_uac = current_uac & ~ACCOUNTDISABLE
 ```
-
 This preserves all other account flags while toggling only the disable bit.
 
 ---
@@ -243,7 +217,6 @@ Logs are written to:
 ```
 C:\Users\<YourUser>\adtool_logs\adtool.log
 ```
-
 Logging includes:
 
 - INFO for successful operations
@@ -260,7 +233,6 @@ Installed locally using:
 ```bash
 pip install -e .
 ```
-
 Future enhancements:
 
 - Standalone `.exe` build via PyInstaller
