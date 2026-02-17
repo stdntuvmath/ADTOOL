@@ -1,0 +1,9 @@
+setup.py
+adtool/__init__.py
+adtool/cli.py
+adtool.egg-info/PKG-INFO
+adtool.egg-info/SOURCES.txt
+adtool.egg-info/dependency_links.txt
+adtool.egg-info/entry_points.txt
+adtool.egg-info/requires.txt
+adtool.egg-info/top_level.txt
