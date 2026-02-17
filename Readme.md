@@ -54,10 +54,9 @@ Windows 10 Host
 
 ### 👤 User Created via CLI
 
-
-```
 ![User Created](images/ADuser.JPG)
-```
+
+![User Created](images/ADuser.JPG)
 ---
 
 ### 👥 Group Membership Managed via CLI
